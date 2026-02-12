@@ -26,6 +26,15 @@ Double‑click `index.html` to open it in the browser. The menu may not load fro
 
 ---
 
-- **Icon:** Uses `icon.jpeg` as favicon.
+## Deploying (e.g. Cloudflare Workers)
+
+Include these in your deployment so they are served at the **root** of your domain:
+
+- `index.html`
+- `icon.JPEG` (favicon + navbar logo)
+- `lang/es.json`, `lang/en.json`, `lang/hy.json`
+
+Use **root-relative** URLs: the site expects the icon at `/icon.JPEG`. If your host is case-sensitive, keep the filename as `icon.JPEG`.
+
 - **Instagram:** [@arevaham_pizza_bar](https://www.instagram.com/arevaham_pizza_bar/)
 - **Map:** Embedded Google Map for Arevaham Pizza Bar.
