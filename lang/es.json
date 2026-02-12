@@ -1,0 +1,155 @@
+{
+  "lang": "es",
+  "dir": "ltr",
+  "nav": {
+    "home": "Inicio",
+    "menu": "Menú",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "subtitle": "Auténtica pizza artesanal horneada con pasión",
+    "cta": "Ver Menú"
+  },
+  "menu": {
+    "title": "Nuestro Menú",
+    "categories": [
+      {
+        "name": "🍽️ Entrantes",
+        "items": [
+          {"name": "Provolone", "desc": "Queso provolone, tomate, orégano, pimienta negra, aceite EVO, albahaca, focaccia.", "price": "7€"},
+          {"name": "Camembret", "desc": "Tomate cherry, queso camembert, aceite EVO, ajo, romero, focaccia.", "price": "7.50€"},
+          {"name": "Frescura", "desc": "Embutidos, quesos frescos y frutos secos variados, focaccia.", "price": "10€"}
+        ]
+      },
+      {
+        "name": "🥗 Ensaladas",
+        "items": [
+          {"name": "Italiana", "desc": "Cesta de pizza, ensalada mixta, tomate, burrata, pesto de limón, albahaca, balsámico, aceite EVO.", "price": "10€"},
+          {"name": "Mediterránea", "desc": "Ensalada mixta, tomate, pepino, aceitunas, cebolla morada, feta, orégano, pesto de limón, balsámico, aceite EVO.", "price": "10€"}
+        ]
+      },
+      {
+        "name": "🍳 Almuerzos",
+        "items": [
+          {"name": "Huevos en salsa de tomate", "desc": "Tomate, huevos, pimiento verde, queso, albahaca.", "price": "9€"},
+          {"name": "Londres", "desc": "Longaniza, chistorino, panceta, huevo, patata casera, queso, cebolla crujiente.", "price": "10€"},
+          {"name": "Patata a la pobre", "desc": "Patata, bacon, queso, huevo frito, cebolla crujiente, pimiento asado, salsa casera (mayonesa+yogur).", "price": "9.50€"}
+        ]
+      },
+      {
+        "name": "🍕 Pizzas Clásicas",
+        "items": [
+          {"name": "Marinara", "desc": "Tomate, ajo, orégano, parmesano, aceite EVO, pimienta negra.", "price": "8.50€"},
+          {"name": "Margarita", "desc": "Tomate, parmesano, mozzarella, albahaca, aceite EVO.", "price": "9.50€"},
+          {"name": "Margarita Búfala", "desc": "Tomate, mozzarella búfala, albahaca, aceite EVO, parmesano.", "price": "10€"},
+          {"name": "Margarita Pesto", "desc": "Mozzarella, tomate semiseco, albahaca, pesto.", "price": "10.50€"},
+          {"name": "Frankfurt", "desc": "Tomate, mozzarella, frankfurt, patata, aceite EVO.", "price": "10€"}
+        ]
+      },
+      {
+        "name": "🌿 Pizzas Especiales",
+        "items": [
+          {"name": "Rosa", "desc": "Mozzarella, mortadela de pistacho, stracciatella, salsa de pistacho.", "price": "14€"},
+          {"name": "Trufita", "desc": "Tomate, mozzarella, champiñón, longaniza, pesto trufado, aceite de trufa.", "price": "14€"},
+          {"name": "Peperoni", "desc": "Tomate, mozzarella, peperoni, parmesano, aceite EVO.", "price": "12€"},
+          {"name": "Verdurita", "desc": "Mozzarella, calabaza, berenjena, pimiento rojo, scamorza ahumado, tomate semiseco, aceite EVO.", "price": "12€"},
+          {"name": "Prosciutto Crudo", "desc": "Tomate, mozzarella, rúcula, jamón curado, parmesano, aceite EVO.", "price": "12.50€"},
+          {"name": "Prosciutto", "desc": "Tomate, mozzarella, jamón cocido, champiñón, aceite EVO.", "price": "11€"},
+          {"name": "Del Mar", "desc": "Tomate, mozzarella, atún, cebolla roja, aceitunas.", "price": "11€"},
+          {"name": "4 Quesos", "desc": "Mozzarella, parmesano, gorgonzola, scamorza ahumado.", "price": "13€"},
+          {"name": "Americana", "desc": "Mozzarella, bacon, scamorza ahumado, patata.", "price": "12€"}
+        ]
+      },
+      {
+        "name": "🥖 Panuozzos",
+        "items": [
+          {"name": "Napolitano", "desc": "Mozzarella, rúcula, jamón curado, tomate semiseco, balsámico, parmesano.", "price": "10.50€"},
+          {"name": "Pistacho", "desc": "Mozzarella, mortadela de pistacho, stracciatella, salsa de pistacho.", "price": "12.50€"},
+          {"name": "Clásica", "desc": "Mozzarella, tomate, prosciutto cotto, burrata.", "price": "10€"},
+          {"name": "Casera", "desc": "Longaniza casera, salsa de tomate con cebolla y cilantro, queso opcional.", "price": "11€"},
+          {"name": "Americano", "desc": "Mozzarella, bacon, patata, cebolla crujiente, huevo frito.", "price": "10.50€"},
+          {"name": "De pollo", "desc": "Mozzarella, pollo, ensalada, cebolla, tomate, pimiento asado, salsa casera.", "price": "11.50€"},
+          {"name": "De cerdo", "desc": "Mozzarella, cerdo, ensalada, tomate, cebolla, pimiento asado.", "price": "11.50€"},
+          {"name": "De ternera", "desc": "Ternera marinada en mantequilla, patata, cebolla y cilantro.", "price": "13€"}
+        ]
+      },
+      {
+        "name": "☕ Cafés e Infusiones",
+        "items": [
+          {"name": "Café solo", "desc": "", "price": "1.30€"},
+          {"name": "Cortado", "desc": "", "price": "1.40€"},
+          {"name": "Café con leche", "desc": "", "price": "1.80€"},
+          {"name": "Carajillo", "desc": "", "price": "2€"},
+          {"name": "Carajillo whisky / Baileys", "desc": "", "price": "2.20€"},
+          {"name": "Americano", "desc": "", "price": "1.60€"},
+          {"name": "Bombón", "desc": "", "price": "2€"},
+          {"name": "Tocado", "desc": "Suplemento", "price": "+0.40€"},
+          {"name": "Del tiempo / Leche sin lactosa / Leche avena", "desc": "Suplementos", "price": "+0.30€"},
+          {"name": "Té / infusiones", "desc": "", "price": "2€"}
+        ]
+      },
+      {
+        "name": "🍺 Bebidas",
+        "items": [
+          {"name": "Amstel 1/3", "desc": "Cerveza", "price": "2.50€"},
+          {"name": "Amstel 1/5", "desc": "", "price": "2€"},
+          {"name": "Amstel Oro 1/3", "desc": "", "price": "2.50€"},
+          {"name": "Amstel Radler 1/3", "desc": "", "price": "2.50€"},
+          {"name": "Heineken 1/3", "desc": "", "price": "3€"},
+          {"name": "Chupitos", "desc": "", "price": "1.80–2€"}
+        ]
+      },
+      {
+        "name": "💧 Aguas",
+        "items": [
+          {"name": "Lanjaron grande", "desc": "", "price": "2€"},
+          {"name": "Lanjaron / Lanjaron cristal", "desc": "", "price": "1.50€"}
+        ]
+      },
+      {
+        "name": "🥤 Refrescos",
+        "items": [
+          {"name": "Coca-Cola", "desc": "", "price": "2€"},
+          {"name": "Fanta", "desc": "", "price": "2€"},
+          {"name": "Coca-Cola para llevar", "desc": "", "price": "2€"},
+          {"name": "Zumos", "desc": "", "price": "1.70€"},
+          {"name": "Agua con gas / Lima gaseosa", "desc": "", "price": "1.50€"},
+          {"name": "Tónica / Aquarius / Fuze Tea", "desc": "", "price": "2€"}
+        ]
+      },
+      {
+        "name": "🍸 Cubatas",
+        "items": [
+          {"name": "Cubatas", "desc": "Mezcla", "price": "6–8€"}
+        ]
+      },
+      {
+        "name": "🍷 Vinos",
+        "items": [
+          {"name": "VT Italiano B15 / VB Italiano B15", "desc": "Copa", "price": "3.50€"},
+          {"name": "VT Abadía B11 / VB Abadía B11", "desc": "Copa", "price": "3€"},
+          {"name": "VB Casas grande B11", "desc": "Copa", "price": "3€"},
+          {"name": "VT Casas grande Crianza B13", "desc": "Copa", "price": "3.50€"}
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "text": "En Arevaham, combinamos la auténtica tradición italiana con los mejores ingredientes locales. Cada pizza se prepara con masa madre fermentada 72 horas y se hornea en nuestro horno de leña a 450°C. Bienvenidos a nuestra familia."
+  },
+  "contact": {
+    "title": "Contacto",
+    "phone_label": "Teléfono",
+    "address_label": "Dirección",
+    "hours_label": "Horario",
+    "phone": "+34 675 078 244",
+    "address": "Av. Burjassot 229, Valencia (46015)",
+    "hours": "Martes a domingo: 7:30–16:00 y 19:00–23:00",
+    "follow": "Síguenos"
+  },
+  "footer": {
+    "rights": "© 2026 Arevaham Pizza Bar. Todos los derechos reservados."
+  }
+}

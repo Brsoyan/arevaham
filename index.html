@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arevaham Pizza Bar</title>
+    <meta name="description" content="Auténtica pizza artesanal en un ambiente elegante.">
+    <link rel="icon" href="icon.jpeg" type="image/jpeg" sizes="32x32">
+    <link rel="apple-touch-icon" href="icon.jpeg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #0e0e0f;
+            --bg-secondary: #161618;
+            --text-primary: #f5f3ef;
+            --text-secondary: #a09e98;
+            --accent: #b8a070;
+            --accent-hover: #c9b896;
+            --accent-dark: #9a8b62;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --spacing-container: 1200px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--spacing-container);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(14, 14, 15, 0.97) 0%, rgba(22, 22, 24, 0.95) 100%);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(184, 160, 112, 0.15);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .logo-img {
+            height: 42px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 15px;
+            border-left: 1px solid rgba(255,255,255,0.08);
+            padding-left: 20px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            color: var(--accent);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, rgba(14, 14, 15, 0.4) 0%, rgba(14, 14, 15, 0.75) 100%), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero-content h1 span {
+            color: var(--accent);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease 0.3s backwards;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: #0e0e0f;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            transition: var(--transition);
+            animation: fadeInUp 1s ease 0.6s backwards;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--accent-hover) 0%, var(--accent) 100%);
+            transform: translateY(-2px);
+        }
+
+        /* Menu Section */
+        .menu-section {
+            background-color: var(--bg-color);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .section-title .divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 0 auto;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .menu-category {
+            margin-bottom: 40px;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        .menu-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .item-details {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .item-name {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .item-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .item-price {
+            font-weight: 600;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--bg-secondary);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        /* Contact & Map */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .info-icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-right: 20px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .info-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+        }
+
+        .info-text p {
+            color: var(--text-secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            font-size: 1.75rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .social-link.instagram:hover {
+            color: #d4a574;
+        }
+
+        .contact-phone-link {
+            user-select: text;
+            -webkit-user-select: text;
+        }
+
+        .contact-address-wrap {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .contact-map-link {
+            color: var(--accent);
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .contact-map-link:hover {
+            color: var(--accent-hover);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            filter: grayscale(100%) contrast(1.2) invert(90%);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, #0c0c0d 100%);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(184, 160, 112, 0.12);
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-secondary);
+                flex-direction: column;
+                padding: 20px;
+                align-items: center;
+                gap: 20px;
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            }
+
+            .lang-switcher {
+                border-left: none;
+                padding-left: 0;
+                margin-top: 10px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <img src="icon.jpeg" alt="Arevaham" class="logo-img">
+                <span>Arevaham</span>
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link" data-i18n="nav.home">Inicio</a>
+                <a href="#menu" class="nav-link" data-i18n="nav.menu">Menú</a>
+                <a href="#about" class="nav-link" data-i18n="nav.about">Nosotros</a>
+                <a href="#contact" class="nav-link" data-i18n="nav.contact">Contacto</a>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="hy">HY</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Arevaham <span>Pizza Bar</span></h1>
+            <p data-i18n="hero.subtitle">Auténtica pizza artesanal horneada con pasión</p>
+            <a href="#menu" class="btn-primary" data-i18n="hero.cta">Ver Menú</a>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="section-padding menu-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="menu.title">Nuestro Menú</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="menu-grid" id="menu-container">
+                <!-- Menu items injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-padding about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="about.title">Sobre Nosotros</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <p class="about-text" data-i18n="about.text">
+                    En Arevaham, combinamos la auténtica tradición italiana...
+                </p>
+                <div class="social-links" style="justify-content: center;">
+                    <a href="https://www.instagram.com/arevaham_pizza_bar/" target="_blank" rel="noopener noreferrer" class="social-link instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="contact.title">Contacto</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-text">
+                            <h4 data-i18n="contact.phone_label">Teléfono</h4>
+                            <p><a id="contact-phone" class="contact-phone-link" href="tel:+34675078244" data-i18n="contact.phone" title="Tap to call">+34 675 078 244</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-text">
+                            <h4 data-i18n="contact.address_label">Dirección</h4>
+                            <p class="contact-address-wrap">
+                                <a id="contact-address" href="https://www.google.com/maps/place/Arevaham+Pizza+Bar/@39.4940908,-0.3979789,17z/data=!3m1!4b1!4m6!3m5!1s0xd604535daa79299:0x1df98f61a3839582!8m2!3d39.4940908!4d-0.395404!16s%2Fg%2F11ywd8mrw5?entry=ttu" target="_blank" rel="noopener noreferrer" data-i18n="contact.address">Av. Burjassot 229, Valencia (46015)</a>
+                                <a href="https://www.google.com/maps/place/Arevaham+Pizza+Bar/@39.4940908,-0.3979789,17z/data=!3m1!4b1!4m6!3m5!1s0xd604535daa79299:0x1df98f61a3839582!8m2!3d39.4940908!4d-0.395404!16s%2Fg%2F11ywd8mrw5?entry=ttu" target="_blank" rel="noopener noreferrer" class="contact-map-link" aria-label="Open in Google Maps"><i class="fas fa-map-marked-alt"></i> Open in Maps</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="far fa-clock"></i></div>
+                        <div class="info-text">
+                            <h4 data-i18n="contact.hours_label">Horario</h4>
+                            <p data-i18n="contact.hours">Lun – Dom: 12:00 – 23:00</p>
+                        </div>
+                    </div>
+                    <div class="info-text">
+                        <h4 data-i18n="contact.follow" style="margin-bottom: 15px;">Síguenos</h4>
+                        <div class="social-links">
+                           <a href="https://www.instagram.com/arevaham_pizza_bar/" target="_blank" rel="noopener noreferrer" class="social-link instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                       </div>
+                   </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246.5!2d-0.395404!3d39.4940908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604535daa79299%3A0x1df98f61a3839582!2sArevaham%20Pizza%20Bar!5e0!3m2!1sen!2ses" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text" data-i18n="footer.rights">© 2026 Arevaham Pizza Bar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Language Data Embedded Directly to Avoid CORS issues on Localhost file://
+        const langData = {
+            es: {
+  "lang": "es",
+  "dir": "ltr",
+  "nav": {
+    "home": "Inicio",
+    "menu": "Menú",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "subtitle": "Auténtica pizza artesanal horneada con pasión",
+    "cta": "Ver Menú"
+  },
+  "menu": {
+    "title": "Nuestro Menú",
+    "categories": [
+      {
+        "name": "🍕 Pizzas Clásicas",
+        "items": [
+          {
+            "name": "Margherita",
+            "desc": "Salsa de tomate San Marzano, mozzarella fresca, albahaca y aceite de oliva virgen extra",
+            "price": "€9.50"
+          },
+          {
+            "name": "Pepperoni",
+            "desc": "Salsa de tomate, mozzarella, pepperoni artesanal y orégano",
+            "price": "€10.50"
+          },
+          {
+            "name": "Quattro Formaggi",
+            "desc": "Mozzarella, gorgonzola, parmesano y fontina",
+            "price": "€11.00"
+          },
+          {
+            "name": "Prosciutto e Funghi",
+            "desc": "Salsa de tomate, mozzarella, jamón cocido y champiñones frescos",
+            "price": "€11.50"
+          }
+        ]
+      },
+      {
+        "name": "🌿 Pizzas Especiales",
+        "items": [
+          {
+            "name": "Truffle Bianca",
+            "desc": "Base de crema de trufa, mozzarella di bufala, rúcula y virutas de parmesano",
+            "price": "€14.00"
+          },
+          {
+            "name": "Diavola",
+            "desc": "Salsa de tomate picante, mozzarella, salami picante, chiles y miel",
+            "price": "€12.50"
+          },
+          {
+            "name": "Vegetariana",
+            "desc": "Salsa de tomate, mozzarella, pimientos asados, berenjenas, calabacín y aceitunas",
+            "price": "€11.00"
+          }
+        ]
+      },
+      {
+        "name": "🥗 Entrantes y Ensaladas",
+        "items": [
+          {
+            "name": "Bruschetta Clásica",
+            "desc": "Pan artesanal con tomate fresco, ajo, albahaca y aceite de oliva",
+            "price": "€6.50"
+          },
+          {
+            "name": "Ensalada César",
+            "desc": "Lechuga romana, parmesano, crutones y aderezo César casero",
+            "price": "€8.00"
+          },
+          {
+            "name": "Burrata con Tomate",
+            "desc": "Burrata cremosa sobre tomates cherry, albahaca fresca y reducción de balsámico",
+            "price": "€9.00"
+          }
+        ]
+      },
+      {
+        "name": "🍷 Bebidas",
+        "items": [
+          {
+            "name": "Agua Mineral",
+            "desc": "Natural o con gas (500ml)",
+            "price": "€2.00"
+          },
+          {
+            "name": "Refresco",
+            "desc": "Coca-Cola, Fanta, Sprite",
+            "price": "€2.50"
+          },
+          {
+            "name": "Cerveza Artesanal",
+            "desc": "Selección de cervezas locales e importadas",
+            "price": "€4.50"
+          },
+          {
+            "name": "Vino de la Casa",
+            "desc": "Tinto o blanco — copa o botella",
+            "price": "€4.00 / €16.00"
+          }
+        ]
+      },
+      {
+        "name": "🍰 Postres",
+        "items": [
+          {
+            "name": "Tiramisú",
+            "desc": "Clásico tiramisú italiano con mascarpone y café espresso",
+            "price": "€6.00"
+          },
+          {
+            "name": "Panna Cotta",
+            "desc": "Panna cotta de vainilla con coulis de frutos rojos",
+            "price": "€5.50"
+          }
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "text": "En Arevaham, combinamos la auténtica tradición italiana con los mejores ingredientes locales. Cada pizza se prepara con masa madre fermentada 72 horas y se hornea en nuestro horno de leña a 450°C. Bienvenidos a nuestra familia."
+  },
+  "contact": {
+    "title": "Contacto",
+    "phone_label": "Teléfono",
+    "address_label": "Dirección",
+    "hours_label": "Horario",
+    "phone": "+34 675 078 244",
+    "address": "Av. Burjassot 229, Valencia (46015)",
+    "hours": "Martes a domingo: 7:30–16:00 y 19:00–23:00",
+    "follow": "Síguenos"
+  },
+  "footer": {
+    "rights": "© 2026 Arevaham Pizza Bar. Todos los derechos reservados."
+  }
+            },
+            en: {
+  "lang": "en",
+  "dir": "ltr",
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Authentic artisan pizza baked with passion",
+    "cta": "View Menu"
+  },
+  "menu": {
+    "title": "Our Menu",
+    "categories": [
+      {
+        "name": "🍕 Classic Pizzas",
+        "items": [
+          {
+            "name": "Margherita",
+            "desc": "San Marzano tomato sauce, fresh mozzarella, basil, and extra virgin olive oil",
+            "price": "€9.50"
+          },
+          {
+            "name": "Pepperoni",
+            "desc": "Tomato sauce, mozzarella, artisan pepperoni, and oregano",
+            "price": "€10.50"
+          },
+          {
+            "name": "Quattro Formaggi",
+            "desc": "Mozzarella, gorgonzola, parmesan, and fontina",
+            "price": "€11.00"
+          },
+          {
+            "name": "Prosciutto e Funghi",
+            "desc": "Tomato sauce, mozzarella, cooked ham, and fresh mushrooms",
+            "price": "€11.50"
+          }
+        ]
+      },
+      {
+        "name": "🌿 Specialty Pizzas",
+        "items": [
+          {
+            "name": "Truffle Bianca",
+            "desc": "Truffle cream base, buffalo mozzarella, arugula, and parmesan shavings",
+            "price": "€14.00"
+          },
+          {
+            "name": "Diavola",
+            "desc": "Spicy tomato sauce, mozzarella, spicy salami, chili peppers, and honey",
+            "price": "€12.50"
+          },
+          {
+            "name": "Vegetariana",
+            "desc": "Tomato sauce, mozzarella, roasted peppers, eggplant, zucchini, and olives",
+            "price": "€11.00"
+          }
+        ]
+      },
+      {
+        "name": "🥗 Starters & Salads",
+        "items": [
+          {
+            "name": "Classic Bruschetta",
+            "desc": "Artisan bread with fresh tomato, garlic, basil, and olive oil",
+            "price": "€6.50"
+          },
+          {
+            "name": "Caesar Salad",
+            "desc": "Romaine lettuce, parmesan, croutons, and homemade Caesar dressing",
+            "price": "€8.00"
+          },
+          {
+            "name": "Burrata with Tomato",
+            "desc": "Creamy burrata over cherry tomatoes, fresh basil, and balsamic reduction",
+            "price": "€9.00"
+          }
+        ]
+      },
+      {
+        "name": "🍷 Drinks",
+        "items": [
+          {
+            "name": "Mineral Water",
+            "desc": "Still or sparkling (500ml)",
+            "price": "€2.00"
+          },
+          {
+            "name": "Soft Drink",
+            "desc": "Coca-Cola, Fanta, Sprite",
+            "price": "€2.50"
+          },
+          {
+            "name": "Craft Beer",
+            "desc": "Selection of local and imported craft beers",
+            "price": "€4.50"
+          },
+          {
+            "name": "House Wine",
+            "desc": "Red or white — glass or bottle",
+            "price": "€4.00 / €16.00"
+          }
+        ]
+      },
+      {
+        "name": "🍰 Desserts",
+        "items": [
+          {
+            "name": "Tiramisù",
+            "desc": "Classic Italian tiramisù with mascarpone and espresso",
+            "price": "€6.00"
+          },
+          {
+            "name": "Panna Cotta",
+            "desc": "Vanilla panna cotta with mixed berry coulis",
+            "price": "€5.50"
+          }
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "text": "At Arevaham, we blend authentic Italian tradition with the finest local ingredients. Every pizza is crafted from 72-hour fermented sourdough and baked in our wood-fired oven at 450°C. Welcome to our family."
+  },
+  "contact": {
+    "title": "Contact",
+    "phone_label": "Phone",
+    "address_label": "Address",
+    "hours_label": "Hours",
+    "phone": "+34 675 078 244",
+    "address": "Av. Burjassot 229, Valencia (46015)",
+    "hours": "Tue – Sun: 7:30–16:00 & 19:00–23:00",
+    "follow": "Follow Us"
+  },
+  "footer": {
+    "rights": "© 2026 Arevaham Pizza Bar. All rights reserved."
+  }
+            },
+            hy: {
+  "lang": "hy",
+  "dir": "ltr",
+  "nav": {
+    "home": "Գլխավոր",
+    "menu": "Մենյու",
+    "about": "Մեր Մասին",
+    "contact": "Կապ"
+  },
+  "hero": {
+    "subtitle": "Իսկական արհեստագործական պիցցա՝ թխված սիրով",
+    "cta": "Տեսնել Մենյուն"
+  },
+  "menu": {
+    "title": "Մեր Մենյուն",
+    "categories": [
+      {
+        "name": "🍕 Դասական Պիցցաներ",
+        "items": [
+          {
+            "name": "Մարգարիտա",
+            "desc": "Սան Մարցանո լոլիկի սոուս, թարմ մոցարելլա, ռեհան և ձիթապտղի յուղ",
+            "price": "€9.50"
+          },
+          {
+            "name": "Պեպերոնի",
+            "desc": "Լոլիկի սոուս, մոցարելլա, արհեստական պեպերոնի և օրեգանո",
+            "price": "€10.50"
+          },
+          {
+            "name": "Չորս Պանիր",
+            "desc": "Մոցարելլա, գորգոնզոլա, պարմեզան և ֆոնտինա",
+            "price": "€11.00"
+          },
+          {
+            "name": "Պրոշուտո և Սունկ",
+            "desc": "Լոլիկի սոուս, մոցարելլա, խոզապուխտ և թարմ սունկ",
+            "price": "€11.50"
+          }
+        ]
+      },
+      {
+        "name": "🌿 Հատուկ Պիցցաներ",
+        "items": [
+          {
+            "name": "Տրյուֆել Բիանկա",
+            "desc": "Տրյուֆելի կրեմ, գոմեշի մոցարելլա, ռուկոլա և պարմեզանի տաշեղներ",
+            "price": "€14.00"
+          },
+          {
+            "name": "Դիավոլա",
+            "desc": "Կծու լոլիկի սոուս, մոցարելլա, կծու սալյամի, չիլի պղպեղ և մեղր",
+            "price": "€12.50"
+          },
+          {
+            "name": "Վեգետարիանա",
+            "desc": "Լոլիկի սոուս, մոցարելլա, բոված պղպեղ, սմբուկ, դդմիկ և ձիթապտուղ",
+            "price": "€11.00"
+          }
+        ]
+      },
+      {
+        "name": "🥗 Նախուտեստներ և Աղցաններ",
+        "items": [
+          {
+            "name": "Կլասիկ Բրուսկետա",
+            "desc": "Արհեստական հաց թարմ լոլիկով, սխտորով, ռեհանով և ձիթապտղի յուղով",
+            "price": "€6.50"
+          },
+          {
+            "name": "Կեսար Աղցան",
+            "desc": "Հռոմեական հազար, պարմեզան, չորահաց և տնական Կեսար սոուս",
+            "price": "€8.00"
+          },
+          {
+            "name": "Բուրրատա Լոլիկով",
+            "desc": "Կրեմային բուրրատա չերի լոլիկով, թարմ ռեհանով և բալզամիկ սոուսով",
+            "price": "€9.00"
+          }
+        ]
+      },
+      {
+        "name": "🍷 Ըմպելիքներ",
+        "items": [
+          {
+            "name": "Հանքային Ջուր",
+            "desc": "Գազավորված կամ առանց (500մլ)",
+            "price": "€2.00"
+          },
+          {
+            "name": "Զովացուցիչ Ըմպելիք",
+            "desc": "Coca-Cola, Fanta, Sprite",
+            "price": "€2.50"
+          },
+          {
+            "name": "Արհեստական Գարեջուր",
+            "desc": "Տեղական և ներմուծված գարեջրի տեսականի",
+            "price": "€4.50"
+          },
+          {
+            "name": "Տնական Գինի",
+            "desc": "Կարմիր կամ սպիտակ — բաժակով կամ շշով",
+            "price": "€4.00 / €16.00"
+          }
+        ]
+      },
+      {
+        "name": "🍰 Աղանդեր",
+        "items": [
+          {
+            "name": "Տիրամիսու",
+            "desc": "Դասական իտալական տիրամիսու մասկարպոնեով և էսպրեսոյով",
+            "price": "€6.00"
+          },
+          {
+            "name": "Պաննա Կոտտա",
+            "desc": "Վանիլային պաննա կոտտա հատապտղի սոուսով",
+            "price": "€5.50"
+          }
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "Մեր Մասին",
+    "text": "Arevaham-ում մենք միավորում ենք իսկական իտալական ավանդույթները տեղական բարձրորակ մթերքների հետ։ Յուրաքանչյուր պիցցա պատրաստվում է 72 ժամ խմորման ենթարկված թթխմորով և թխվում է մեր փայտի վառարանում 450°C-ում։ Բարի գալուստ մեր ընտանիք։"
+  },
+  "contact": {
+    "title": "Կապ",
+    "phone_label": "Հեռախոս",
+    "address_label": "Հասցե",
+    "hours_label": "Աշխատանքային Ժամեր",
+    "phone": "+34 675 078 244",
+    "address": "Av. Burjassot 229, Valencia (46015)",
+    "hours": "Երկ – Կիր: 7:30–16:00 և 19:00–23:00",
+    "follow": "Հետևեք Մեզ"
+  },
+  "footer": {
+    "rights": "© 2026 Arevaham Pizza Bar. Բոլոր իրավունքները պաշտպանված են։"
+  }
+            }
+        };
+
+        function loadLangData() {
+            const base = window.location.pathname.replace(/\/[^/]*$/, '') || '.';
+            const prefix = (base === '.' ? '' : base);
+            return Promise.all([
+                fetch(prefix + '/lang/es.json').then(r => r.json()),
+                fetch(prefix + '/lang/en.json').then(r => r.json()),
+                fetch(prefix + '/lang/hy.json').then(r => r.json())
+            ]).then(([es, en, hy]) => {
+                langData.es = es;
+                langData.en = en;
+                langData.hy = hy;
+            }).catch(() => {});
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await Promise.race([ loadLangData(), new Promise(r => setTimeout(r, 250)) ]);
+            const menuContainer = document.getElementById('menu-container');
+            const langButtons = document.querySelectorAll('.lang-btn');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const links = document.querySelectorAll('.nav-link');
+
+            let currentLang = 'es';
+
+            // Mobile Menu Toggle
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Language Switcher Logic
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.getAttribute('data-lang');
+                    if (lang !== currentLang) {
+                        currentLang = lang;
+                        
+                        // Update active button state
+                        langButtons.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+
+                        // Load new language data from local object
+                        loadLanguage(lang);
+                    }
+                });
+            });
+
+            // Initial Load
+            loadLanguage(currentLang);
+
+            function loadLanguage(lang) {
+                const data = langData[lang];
+                if (!data) {
+                    console.error('Language not found:', lang);
+                    return;
+                }
+                
+                updateUI(data);
+                renderMenu(data.menu.categories);
+                
+                // Specific tweaks for direction or fonts if needed
+                document.documentElement.lang = lang;
+            }
+
+            function updateUI(data) {
+                // Determine property access path for keys like "nav.home"
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const value = getNestedValue(data, key);
+                    if (value) el.textContent = value;
+                });
+            }
+
+            // Helper to get nested JSON values (e.g. "nav.home")
+            function getNestedValue(obj, path) {
+                return path.split('.').reduce((prev, curr) => {
+                    return prev ? prev[curr] : null;
+                }, obj);
+            }
+
+            function renderMenu(categories) {
+                menuContainer.innerHTML = '';
+                
+                categories.forEach(category => {
+                    const categoryDiv = document.createElement('div');
+                    categoryDiv.classList.add('menu-category');
+
+                    // Allow HTML in category name for emojis
+                    const itemsHtml = category.items.map(item => `
+                        <div class="menu-item">
+                            <div class="item-details">
+                                <div class="item-name">${item.name}</div>
+                                <div class="item-desc">${item.desc}</div>
+                            </div>
+                            <div class="item-price">${item.price}</div>
+                        </div>
+                    `).join('');
+
+                    categoryDiv.innerHTML = `
+                        <h3 class="category-title">${category.name}</h3>
+                        <div class="category-items">
+                            ${itemsHtml}
+                        </div>
+                    `;
+
+                    menuContainer.appendChild(categoryDiv);
+                });
+
+                // Trigger animations for new items
+                triggerAnimations();
+            }
+
+            function triggerAnimations() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    observer.observe(item);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

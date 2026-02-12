@@ -1,0 +1,155 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Authentic artisan pizza baked with passion",
+    "cta": "View Menu"
+  },
+  "menu": {
+    "title": "Our Menu",
+    "categories": [
+      {
+        "name": "🍽️ Starters",
+        "items": [
+          {"name": "Provolone", "desc": "Provolone cheese, tomato, oregano, black pepper, EVO oil, basil, focaccia.", "price": "€7"},
+          {"name": "Camembret", "desc": "Cherry tomato, camembert cheese, EVO oil, garlic, rosemary, focaccia.", "price": "€7.50"},
+          {"name": "Frescura", "desc": "Cold cuts, fresh cheeses and assorted nuts, focaccia.", "price": "€10"}
+        ]
+      },
+      {
+        "name": "🥗 Salads",
+        "items": [
+          {"name": "Italiana", "desc": "Pizza basket, mixed salad, tomato, burrata, lemon pesto, basil, balsamic, EVO oil.", "price": "€10"},
+          {"name": "Mediterránea", "desc": "Mixed salad, tomato, cucumber, olives, red onion, feta, oregano, lemon pesto, balsamic, EVO oil.", "price": "€10"}
+        ]
+      },
+      {
+        "name": "🍳 Lunches",
+        "items": [
+          {"name": "Eggs in tomato sauce", "desc": "Tomato, eggs, green pepper, cheese, basil.", "price": "€9"},
+          {"name": "Londres", "desc": "Longaniza, chistorra, bacon, egg, homemade potato, cheese, crispy onion.", "price": "€10"},
+          {"name": "Patata a la pobre", "desc": "Potato, bacon, cheese, fried egg, crispy onion, roasted pepper, homemade sauce (mayo+yogurt).", "price": "€9.50"}
+        ]
+      },
+      {
+        "name": "🍕 Classic Pizzas",
+        "items": [
+          {"name": "Marinara", "desc": "Tomato, garlic, oregano, parmesan, EVO oil, black pepper.", "price": "€8.50"},
+          {"name": "Margherita", "desc": "Tomato, parmesan, mozzarella, basil, EVO oil.", "price": "€9.50"},
+          {"name": "Margherita Buffalo", "desc": "Tomato, buffalo mozzarella, basil, EVO oil, parmesan.", "price": "€10"},
+          {"name": "Margherita Pesto", "desc": "Mozzarella, semi-dried tomato, basil, pesto.", "price": "€10.50"},
+          {"name": "Frankfurt", "desc": "Tomato, mozzarella, frankfurt, potato, EVO oil.", "price": "€10"}
+        ]
+      },
+      {
+        "name": "🌿 Specialty Pizzas",
+        "items": [
+          {"name": "Rosa", "desc": "Mozzarella, pistachio mortadela, stracciatella, pistachio sauce.", "price": "€14"},
+          {"name": "Trufita", "desc": "Tomato, mozzarella, mushroom, longaniza, truffle pesto, truffle oil.", "price": "€14"},
+          {"name": "Pepperoni", "desc": "Tomato, mozzarella, pepperoni, parmesan, EVO oil.", "price": "€12"},
+          {"name": "Verdurita", "desc": "Mozzarella, pumpkin, eggplant, red pepper, smoked scamorza, semi-dried tomato, EVO oil.", "price": "€12"},
+          {"name": "Prosciutto Crudo", "desc": "Tomato, mozzarella, arugula, cured ham, parmesan, EVO oil.", "price": "€12.50"},
+          {"name": "Prosciutto", "desc": "Tomato, mozzarella, cooked ham, mushroom, EVO oil.", "price": "€11"},
+          {"name": "Del Mar", "desc": "Tomato, mozzarella, tuna, red onion, olives.", "price": "€11"},
+          {"name": "4 Cheeses", "desc": "Mozzarella, parmesan, gorgonzola, smoked scamorza.", "price": "€13"},
+          {"name": "Americana", "desc": "Mozzarella, bacon, smoked scamorza, potato.", "price": "€12"}
+        ]
+      },
+      {
+        "name": "🥖 Panuozzos",
+        "items": [
+          {"name": "Napolitano", "desc": "Mozzarella, arugula, cured ham, semi-dried tomato, balsamic, parmesan.", "price": "€10.50"},
+          {"name": "Pistacho", "desc": "Mozzarella, pistachio mortadela, stracciatella, pistachio sauce.", "price": "€12.50"},
+          {"name": "Clásica", "desc": "Mozzarella, tomato, prosciutto cotto, burrata.", "price": "€10"},
+          {"name": "Casera", "desc": "Homemade longaniza, tomato sauce with onion and cilantro, optional cheese.", "price": "€11"},
+          {"name": "Americano", "desc": "Mozzarella, bacon, potato, crispy onion, fried egg.", "price": "€10.50"},
+          {"name": "De pollo", "desc": "Mozzarella, chicken, salad, onion, tomato, roasted pepper, homemade sauce.", "price": "€11.50"},
+          {"name": "De cerdo", "desc": "Mozzarella, pork, salad, tomato, onion, roasted pepper.", "price": "€11.50"},
+          {"name": "De ternera", "desc": "Butter-marinated beef, potato, onion and cilantro.", "price": "€13"}
+        ]
+      },
+      {
+        "name": "☕ Coffee & Infusions",
+        "items": [
+          {"name": "Espresso", "desc": "", "price": "€1.30"},
+          {"name": "Cortado", "desc": "", "price": "€1.40"},
+          {"name": "Coffee with milk", "desc": "", "price": "€1.80"},
+          {"name": "Carajillo", "desc": "", "price": "€2"},
+          {"name": "Carajillo whisky / Baileys", "desc": "", "price": "€2.20"},
+          {"name": "Americano", "desc": "", "price": "€1.60"},
+          {"name": "Bombón", "desc": "", "price": "€2"},
+          {"name": "Tocado", "desc": "Extra", "price": "+€0.40"},
+          {"name": "Iced / Lactose-free milk / Oat milk", "desc": "Extras", "price": "+€0.30"},
+          {"name": "Tea / infusions", "desc": "", "price": "€2"}
+        ]
+      },
+      {
+        "name": "🍺 Drinks",
+        "items": [
+          {"name": "Amstel 1/3", "desc": "Beer", "price": "€2.50"},
+          {"name": "Amstel 1/5", "desc": "", "price": "€2"},
+          {"name": "Amstel Oro 1/3", "desc": "", "price": "€2.50"},
+          {"name": "Amstel Radler 1/3", "desc": "", "price": "€2.50"},
+          {"name": "Heineken 1/3", "desc": "", "price": "€3"},
+          {"name": "Shots", "desc": "", "price": "€1.80–2"}
+        ]
+      },
+      {
+        "name": "💧 Waters",
+        "items": [
+          {"name": "Lanjaron large", "desc": "", "price": "€2"},
+          {"name": "Lanjaron / Lanjaron cristal", "desc": "", "price": "€1.50"}
+        ]
+      },
+      {
+        "name": "🥤 Soft Drinks",
+        "items": [
+          {"name": "Coca-Cola", "desc": "", "price": "€2"},
+          {"name": "Fanta", "desc": "", "price": "€2"},
+          {"name": "Coca-Cola to go", "desc": "", "price": "€2"},
+          {"name": "Juices", "desc": "", "price": "€1.70"},
+          {"name": "Sparkling water / Lime soda", "desc": "", "price": "€1.50"},
+          {"name": "Tonic / Aquarius / Fuze Tea", "desc": "", "price": "€2"}
+        ]
+      },
+      {
+        "name": "🍸 Mixed Drinks",
+        "items": [
+          {"name": "Cubatas", "desc": "Highballs", "price": "€6–8"}
+        ]
+      },
+      {
+        "name": "🍷 Wines",
+        "items": [
+          {"name": "VT Italiano B15 / VB Italiano B15", "desc": "Glass", "price": "€3.50"},
+          {"name": "VT Abadía B11 / VB Abadía B11", "desc": "Glass", "price": "€3"},
+          {"name": "VB Casas grande B11", "desc": "Glass", "price": "€3"},
+          {"name": "VT Casas grande Crianza B13", "desc": "Glass", "price": "€3.50"}
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "text": "At Arevaham, we blend authentic Italian tradition with the finest local ingredients. Every pizza is crafted from 72-hour fermented sourdough and baked in our wood-fired oven at 450°C. Welcome to our family."
+  },
+  "contact": {
+    "title": "Contact",
+    "phone_label": "Phone",
+    "address_label": "Address",
+    "hours_label": "Hours",
+    "phone": "+34 675 078 244",
+    "address": "Av. Burjassot 229, Valencia (46015)",
+    "hours": "Tue – Sun: 7:30–16:00 & 19:00–23:00",
+    "follow": "Follow Us"
+  },
+  "footer": {
+    "rights": "© 2026 Arevaham Pizza Bar. All rights reserved."
+  }
+}
