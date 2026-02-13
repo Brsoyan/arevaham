@@ -1,0 +1,7 @@
+# Don’t serve these as public assets
+README.md
+.gitignore
+.git
+wrangler.jsonc
+.assetsignore
+.DS_Store

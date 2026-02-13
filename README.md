@@ -6,7 +6,6 @@
 In a terminal, go to the project folder and run:
 
 ```bash
-cd /Users/brsoyan/Desktop/arevaham
 python3 -m http.server 8000
 ```
 
@@ -26,15 +25,16 @@ Double‑click `index.html` to open it in the browser. The menu may not load fro
 
 ---
 
-## Deploying (e.g. Cloudflare Workers)
+## Deploying (Cloudflare Workers)
 
-Include these in your deployment so they are served at the **root** of your domain:
+The project includes a **wrangler.jsonc** so you can deploy with:
 
-- `index.html`
-- `icon.JPEG` (favicon + navbar logo)
-- `lang/es.json`, `lang/en.json`, `lang/hy.json`
+```bash
+npx wrangler deploy
+```
 
-Use **root-relative** URLs: the site expects the icon at `/icon.JPEG`. If your host is case-sensitive, keep the filename as `icon.JPEG`.
+This uploads the current directory as static assets (index.html, icon.JPEG, lang/*.json).  
+If you already have a Worker in the dashboard (e.g. another name/URL), set that name in `wrangler.jsonc` → `"name": "your-worker-name"` so the deploy targets it.
 
 - **Instagram:** [@arevaham_pizza_bar](https://www.instagram.com/arevaham_pizza_bar/)
 - **Map:** Embedded Google Map for Arevaham Pizza Bar.
